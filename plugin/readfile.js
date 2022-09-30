@@ -45,8 +45,8 @@ var text={
 		//3.4 DL workflow complete
 		f4_4:"The complete workflow can be seen in this image. For the model training, pairs of classified satellite images and  labels are used as input data. When the model is used for prediction the input data is the satellite image, which shoulde be classified by the model. In the training phase the input data is seperated into training, validation and testing data. Training and validation data are used as input for the model. At the end the test data is used for determining the accuracy of the model prediction. The model result is a so-called propability map, which provides a probability map. The user can then decide how to define the final classes and create the final prediction map.",
 	
-		//3.5 Quiz
-		f4_5:"We are now at the end of the first chapter, please click at the link and absolve quiz 1.",
+		//3.5 Quiz --> no text to stop speech --< can be optimized later
+		f4_5:"",
 
 	//4 CNN
 	f5_0:"Chapter 2: The Convolutional Neural Network architecture ",
@@ -61,7 +61,7 @@ var text={
 		f5_2_f_2:"The Decoder path also called expansive synthesis path projects the learned feature representation to the original pixel space. The result is a prediction map, where each pixel had been assigned a semantic class.",
 
 		//Quiz
-		f5_3:"We are now at the end of the second chapter, please click at the link and absolve quiz 2",
+		f5_3:"",
 
 	//5 Application
 	f6_0:"Chapter 3: Application example with tensorflow",
@@ -94,7 +94,7 @@ var text={
 		//Code
 		f6_10:"Here you can see the whole code, which was used for the example. You can find the link to the Jupyter notebook in the course description. ",
 		//Quiz
-		f6_11:"We are now at the end of the second chapter, please click at the link and absolve quiz 3",
+		f6_11:"",
 
 	//6 Summary
 		f7_0:"Chapter 4: Summary",
