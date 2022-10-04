@@ -28,48 +28,8 @@ if(i !== null && i !== ''){
     }
 // define speech and attributes
     
-read.readfile=function(t){
+read.readfile=function(t, lang){
      
- 
-    let userAgentString= navigator.userAgent;
-    // Detect Internet Explorer (not usable for voice!!)
-    if(userAgentString.indexOf("MSIE")>-1 || userAgentString.indexOf("rv")<-1){
-        lang='female en-IE';
-        console.log('MSIE', lang)
-    }
-    // Detect Chrome (favorite)
-    if(userAgentString.indexOf("Chrome")>-1){
-        lang='en-GB';
-        console.log('Chrome', lang)
-    }
-    //Detect Firefox (only one voice available)
-    if(userAgentString.indexOf("Firefox")>-1){
-        lang='en-US';
-        console.log('Firefox',lang)
-    }
-    //Detect Safari (favorite)
-    if(userAgentString.indexOf("Safari")>-1){
-        lang='en-GB';
-        console.log('Safari', lang)
-    }
-    //Detect Samsung Browser (favorite))
-    if(userAgentString.indexOf('SamsungBrowser')>-1){
-        lang="en-IE";
-        console.log('SamsungBrowser', lang)
-    }
-    //Detect Microsoft Edge (favorite))
-    if(userAgentString.indexOf('Edge')>-1){
-        lang="female en-IE";
-        console.log('Edge', lang)
-    }
-    //Detect Opera (only one voice available)
-    if(userAgentString.indexOf('Opera')>-1 || userAgentString.indexOf('OPR')>-1) {
-        lang="en-US";
-        console.log('Opera', lang)
-    }
-    
-  console.log(lang)
-
 
     read.speech.lang = lang;
     read.speech.volume = 1;
@@ -100,8 +60,8 @@ read.delete=function()
 {window.speechSynthesis.cancel();
 }
     //get an overview over the different voices
-    	/*
-		
+    	
+	/*		
 	const getVoices = () => {
   					return new Promise((resolve) => {
    					 let voices = speechSynthesis.getVoices()
@@ -127,6 +87,6 @@ read.delete=function()
 				}
 
 				printVoicesList()
-				
+				*/
 
-/*
+

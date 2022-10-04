@@ -2,24 +2,24 @@
 var text={
 	// Introduction and Welcome
 	f0_0:"Let's get started!",
-	f1_0:"Welcome to the EO-Lab course for Deep Learning for EO data processing on the EO cloud with Tensor flow. This course is designed in such a way that you can study the material on your own. The course content is conveyed through interactive sessions, meaning that chapters as well as exercises use multi-media content to  study the matter presented. Explore and enjoy!",
+	f1_0:"Welcome to the EO-Lab course for Deep Learning for EO data processing on the EO cloud with Tensor flow. This course is designed in such a way that you can study the material on your own. The course content is conveyed through interactive elements, meaning that chapters as well as exercises use multi-media content to  study the matter presented. We hope you will enjoy this course!",
 	
 	//1 Content
-	f2_0:"The following contents will be covered in this course.",
-	f2_0_f_1:"First we will convey some general information about this course.",
-	f2_0_f_2:" In the next chapter an introduction to deep learning for earth observation will be given.",
-	f2_0_f_3: "Followed by the explanation of convolutional neural networks",
-	f2_0_f_4: "We will then show you how to use the EO Lab Browser and Platform to implement a deep learning model in tensor flow.", 
-	f2_0_f_5:"Finally a summary will provide you the most important points of this course.",
+	f2_0:"The following contents will be covered by this course.",
+	f2_0_f_1:"First we will share some general information about the course.",
+	f2_0_f_2:" In the next chapter we provide an introduction to deep learning for earth observation.",
+	f2_0_f_3: "Followed by the explanation of convolutional neural networks, in short, CNNs.",
+	f2_0_f_4: "We will then show you how to use the EO Lab browser and platform to implement a deep learning model in tensor flow.", 
+	f2_0_f_5:"Finally we summarise the most important take-aways of this course.",
 
 
 	// 2 Preface
-	f3_0:"This satellite image was taken by the Copernicus Sentinel 2 satellite, showing the city of Salzburg. This view will accompany us through the course showing the ending and start of each chapter.",
+	f3_0:"This satellite image was taken by the Sentinel 2 satellite in May 2022, showing the city of Salzburg. This view will accompany us through the course at the start and closing of each chapter.",
 
 	// 2.1 Set- up
-	f3_1:"To follow the course and get the best learning experience the following set up is needed. A dedicated cloud resource on EO-Lab was generated. Further a virtual machine with GPU support was implemented and a scripting editor for phyton was installed. In this course we will use Jupyter notebook. If you need help to set up the EO lab resources accordingly you can find a detailed information at the EO lab help section or the EO lab knowledge base.",
+	f3_1:"To follow the course and get the best learning experience, the following set up is needed. A dedicated cloud resource on EO-Lab was generated. Further a virtual machine with GPU support was implemented; as well as a scripting editor for phyton was installed. In this course we will use Jupyter notebook. If you need help to set up the EO lab resources accordingly you can find a detailed information at the EO lab help section or the EO lab knowledge base.",
 	// 2.2 Work Environment
-	f3_2:"Before proceeding, please connect in a seperate window to you virtual machine on EO lab. This way you can actively follow the course content. ",
+	f3_2:"Before proceeding, please connect in a separate window to you virtual machine on EO lab. This way you can actively follow the course content. ",
 	//2.3 Section Ende
 	f3_3:"If everything is set up go on to chapter 1.",
 
@@ -28,22 +28,22 @@ var text={
 	// 3 Introduction to AI for EO
 	f4_0:"Chapter 1: Introduction to artificial intellegence for earth observation",
 		//3.1 CNNs
-		f4_1:"The general objective is to classify land cover on a satellite imagery ussing convolutional neural networks, also called CNNs.",
-			f4_1_f_1:"There are different approaches applied within deep learning. Supervised learning, which requires images and labels of the objects to be classified. They are feeded to a machine learning algorithm, which then produces the classification.",
-			f4_1_f_2:"Supervised machine learning works with an artificial intelligence model. This model is trained with image and label data. Based on these data the parameters of an algorthim are adjusted. The model learns and improves through training. Afterwards the model can then be re-used to predict, meaning classify, new imagery.",
+		f4_1:"The general objective in our context is to classify different land cover types on a satellite imagery using convolutional neural networks.",
+			f4_1_f_1:"There are different approaches applied within deep learning. Supervised learning, which requires images and labels of the objects to be classified. They are fed to a machine learning algorithm, which then produces the classification.",
+			f4_1_f_2:"Supervised machine learning works with an artificial intelligence model. This model is trained with image and label data. Based on these data the parameters of an algorthim are adjusted. The model learns and improves through training. Afterwards the model can then be re-used to classify new imagery.",
 			f4_1_f_3:"There exist different types of classification tasks for deep learning, which we will explain to you in the next slide. For and illustration at the end of the lecture, we will use semantic segmentation.",
 		//3.2 Classification tasks
-			f4_2:"In general we distinguish between five different tasks to be performed using deep learning for image classification. The first is image classification and recognition. Here, images are recognized according to the scene content; images receive one label. For instance an image showing an airport. When single objects should be detected in a scene, we speak of object detection. Here single objects are recognized and marked either with bounding boxes or delineated in more detail. Segmenation tasks combine object detection and classification. ",
-			f4_2_f_1:"We will later on use semantic segmentation. But what is semantic segmentation?",
-			f4_2_f_2:"Segmentation first creates image segments, which are used for object detection and classification. Semantic segmentation assigns class probabilites to each picksel.",
+			f4_2:"In general we distinguish between several different tasks to be performed using deep learning for image classification. The first is image classification and recognition. Here, images are recognized according to the scene content. images receive one label, for instance an image showing an airport. When single objects should be detected in a scene, we speak of object detection. Here single objects are recognized and marked either with bounding boxes or delineated in more detail. Segmentation tasks combine object detection and classification.",
+			f4_2_f_1:"Later on we will use semantic segmentation. But what is it?",
+			f4_2_f_2:"Semantic segmentation assigns class probabilites to each picksel. It ends up with image segments classified according to the specific class of interest. Instance segmentation goes one step further and distinguishes single instances, or objects, of each class.",
 		//3.3 DL workflow
-		f4_3:"Let us take a look at the general deep learning workflow for EO data. At first the input data has to be collected. There are different possibilites how to get input data, which will be described closer in the next slide.",
-			f4_3_f_1:"In the next step a classifier and the model parameters have to be selected",
+		f4_3:"Let us take a look at the general deep learning workflow for EO data. At first the input data has to be collected. There are different options how to get input data, which we will explain in the next slide.",
+			f4_3_f_1:"In the following step a classifier and the respective model parameters need to be selected",
 			f4_3_f_2:"Now the model is trained and the first classifcation is performed",
-			f4_3_f_3:"The classification result has to be assessed and evaluated",
-			f4_3_f_4:"If the classification is satisfying it shall be used further on. In case of a poor prediction result new input data has to be collected to improve the model performance.",
+			f4_3_f_3:"The classification result needs to be assessed and evaluated",
+			f4_3_f_4:"If the classification is satisfying it shall be used further on. In case of a poor prediction result, new input data are collected to improve the model performance.",
 		//3.4 DL workflow complete
-		f4_4:"The complete workflow can be seen in this image. For the model training, pairs of classified satellite images and labels are used as input data. In the training phase the input data is seperated into training, validation and testing data. Training and validation data are used as input for the model. At the end the test data is used for determining the accuracy of the model's prediction. The model result is a so-called propability map showing probabilites for each picksel. Users then set thresholds for the final class assignments and create the final prediction map.",
+		f4_4:"The complete workflow can be seen in this image. For the model training, pairs of classified satellite images and labels are used as input data. In the training phase the input data is seperated into training, validation and testing data. Training and validation data are used as input for the model. At the end the test data is used for determining the accuracy of the model's prediction. The model result is a so-called propability map showing class assignment probabilites for each picksel. Users then set thresholds for the final class assignments and create the final classification map.",
 	
 		//3.5 Quiz --> no text to stop speech --< can be optimized later
 		f4_5:"",
@@ -51,14 +51,14 @@ var text={
 	//4 CNN
 	f5_0:"Chapter 2: The architecture of CNNs",
 		// CNN Architecture
-		f5_1:"There are two different ways to design a convolutional neural network",
+		f5_1:"There are again different ways to design a convolutional neural network",
 		f5_1_f_1:"Feature maps are constructed using convolution and pooling. This includes filter kernels to create feature maps. Each filter output is called a layer. These layers are used to learn characteristic features of the input data and weigh them. Therefore each layer containes a certain number of nodes, which are mathematical functions. ",
 		f5_1_f_2:"In a fully connected convolutional network the nodes of all layers are connected to each other. In this case, no assumptions about the input data is made. Deep learning models can have multiple layers and is able to carry out more complex tasks like semantic segmentation.",
 		//U-Net model
 
 		f5_2:"An example of a deep learning model is the U-Net model, which will be used in the example. The U-Net model architecture has the shape of the letter U and is a combination of an encoder and decoder.",
-		f5_2_f_1:"At first the input data runs through the encoder path. The contracting analysis path. Here the model weights are trained. ",
-		f5_2_f_2:"The decoder path also called expansive synthesis path projects the learned feature representation to the original pixel space. The result is a prediction map, where each pixel had been assigned a semantic class.",
+		f5_2_f_1:"At first the input data runs through the encoder path, also referred to the contracting analysis path. Here the model weights are trained. ",
+		f5_2_f_2:"The decoder path, also called expansive synthesis path, projects the learned feature representation to the original pixel space. The result is a prediction map, where each pixel had been assigned a semantic class.",
 
 		//Quiz
 		f5_3:"",
