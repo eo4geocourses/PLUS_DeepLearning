@@ -10,16 +10,16 @@
 
 	<title>EOlab Deep learning </title>
 	<meta property="dc:title" content="EOlab Deep learning">
-	<meta property="dc:creator" content="Vanessa Streifeneder, Stefan Lang & Florian Albrecht, University of Salzburg, SpaSe">
+	<meta property="dc:creator" content="Vanessa Streifeneder & Florian Albrecht, University of Salzburg, SpaSe">
 	<meta property="dc:publisher" content="University of Salzburg">
-	<meta property="dc:subject" content="Deep learning for EO data processing on the EO Cloud with TensorFlow">
+	<meta property="dc:subject" content="Deep learning for EO data processing on the EO Cloud with TensorFlow and Pytorch">
 	
 	<!-- Metadata need to be updated -->
 
 	<meta property="dc:abstract"
 		content="">
 
-	<meta property="dc:tableOfContents" content="(1) Preface; (2) Introduction to Deep Learning (DL) for Earth observation (EO); (3) The Convolutional Neural Network architecture; (4) Application example with TensorFlow; (5) Summary">
+	<meta property="dc:tableOfContents" content="(1) Introduction; (2) Image interpretation and perception; (3) Basic concepts of hierarchy theory; (4) Knowledge representation; (5) Image segmentation; (6) Object-based classification (incl. class modelling); (7) Accuracy assessment (incl. object validity; (8) Outlook: OBIA for non-image data">
 	<meta property="dc:description"
 		content="">
 	<meta property="dc:contributor" content="Vanessa Streifeneder,Florian Albrecht,Stefan Lang">
@@ -115,12 +115,12 @@
 		
 				<h1 >Deep Learning for EO data processing on the EO Cloud with TensorFlow </h1>
 				<div style="color:#ebf4fe">
-				<small>Vanessa Streifeneder <sub>1</sub>, Florian Albrecht <sub>2</sub>, Stefan Lang <sub>1</sub></small>
+				<small>Vanessa Streifeneder <sub>1</sub>, Florian Albrecht <sub>2</sub>, Stefan Lang<sub>1</sub></small>
 				<p></p>
 				<p>
-					<small> <sub>1</sub> Dept. of Geoinformatics | University of Salzburg</small>			
+					<small> <sub> 1</sub> University of Salzburg</small>			
 				
-					<small> <sub>2</sub> Spatial Services Ltd.</small>			
+					<small> <sub> 2</sub> Spatial Service GmbH</small>			
 				</p>
 				</div>
 
@@ -139,32 +139,28 @@
 			<div  >
 				<ol >
 				<div class="fragment" id="f2_0_f_1">
-					<li>
-						Preface
+					<li>Preface
 					</li>
 				<div class="fragment" id="f2_0_f_2">
-					<li > 
-						Introduction to deep learning (DL) for Earth observation (EO)
-					</li>	
-				</div>	
-				<div class="fragment" id="f2_0_f_3">								
-					<li >
-						Convolutional neural networks (CNN)
-					</li>
-				</div>
-				<div class="fragment" id="f2_0_f_4">	
-					<li >
-						Application example with TensorFlow
-					</li>
-				</div>
-				<div class="fragment" id="f2_0_f_5">	
-					<li > 
-						Summary
-					</li>
-				</div>					
-				</ol>		
-							
+				<li > Introduction to Deep Learning (DL) for Earth observation (EO)
+				</li>	
+			</div>	
+			<div class="fragment" id="f2_0_f_3">								
+				<li >
+					The Convolutional Neural Network (CNN)
+				</li>
 			</div>
+			<div class="fragment" id="f2_0_f_4">	
+				<li >
+					Application example with TensorFlow
+				</li>
+			</div>
+			<div class="fragment" id="f2_0_f_5">	
+				<li > Summary</li>
+			</div>					
+			</ol>		
+							
+		</div>
 			<aside class="notes">
 					
 				<script>
@@ -178,9 +174,9 @@
 		<!-- Preface-->
 		<section id="Chapter 3.0">
 			<section data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
-				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Austria, on 18 May 2022 </p>
+				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
 				
-					<h2 style="background-color: white; margin: 5%; ">Preface</h2>
+					<h2 style="background-color: white; margin: 5%; "> Preface</h2>
 					
 			
 				<aside class="notes">
@@ -193,7 +189,7 @@
 		<!--Set-Up-->
 
 		<section id="Chapter 3.1">
-			<h2>The EO-Lab context</h2>
+			<h2> The EO-Lab context</h2>
 			<ul style="font-size:60% ; width:80%_; text-align: left;">
 				<li>  The course material has been optimized for the following setup:</li>
 				<ul>
@@ -208,13 +204,13 @@
 					</li>
 				</ul>
 				
-				<li>For setting up your EO-Lab resources accordingly, information is available here:</li>
-				<ul>
+					<li>For setting up your EO-Lab resources accordingly, information is available here</li>
+					<ul>
 					<li>
 						FAQs in the EO-Lab help, accessible at <a href="https://eo-lab.org/de/help/" > EO-Lab Help</a>
 					</li>
 					<li>
-						The EO-Lab documentation, accessible at <a href=" https://knowledgebase.eo-lab.org"> EO-Lab Knowledge Base</a>
+						The EO-Lab documentation, accessible at <a href=" https://knowledgebase.eo-lab.org"> EO-Lab knowledgebase</a>
 					</li>
 				</ul>
 			</ul>
@@ -229,7 +225,7 @@
 		<section id="Chapter 3.2">
 			<h2> How to arrange your work environment</h2>
 			<ul style="text-align: left; font-size:70%">
-				<li>This course focuses on scripting for Deep Learning.</li>
+				<li >This course focuses on scripting for Deep Learning.</li>
 				<li>Open the course material and your VM with the programming environment in two separate windows next to each other.</li>
 			</ul>
 			<figure>
@@ -249,7 +245,7 @@
 		<!-- Chapter 1: Introduction-->
 		<section id="Chapter 4.0" >
 			<section data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
-					<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Austria, on 18 May 2022 </p>
+					<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
 					
 						<h2 style="background-color: white; margin: 5%; "> Introduction to AI for EO</h2>
 						
@@ -266,7 +262,7 @@
 		<!-- DL for classification of EO data--> 
 
 			<section id="Chapter 4.1">
-				<h2 >Deep learning (DL) for classification of Earth observation (EO) data</h2>
+				<h2 >Deep Learning (DL) for classification of Earth observation (EO) data</h2>
 				<div style="font-size: 50%; margin-right: 40%;">
 					<ul>
 					
@@ -275,7 +271,7 @@
 						</li>
 						<ul>
 							<li>
-								Classifying land cover in satellite imagery using CNNs
+								Classifying land cover in satellite imagery using Convolutional Neural Networks (CNNs)
 							</li>
 						</ul>						
 						<li>
@@ -284,17 +280,17 @@
 						<ul>
 							<div class="fragment" id="f4_1_f_1">
 							<li>
-								Supervised learning - requires training data as input
+								Supervised learning- requires training data as input
 							</li>
 						</div>
 						<div class="fragment" id="f4_1_f_2">
 							<li>
-								Machine learning - after training of algorithm follows prediction by algorithm
+								Machine learning- after training of algorithm follows prediction by algorithm
 							</li>
 						</div>
 						<div class="fragment" id="f4_1_f_3">
 							<li>
-								Type of classification task for land cover mapping - Semantic segmentation
+								Type of classification task for land cover mapping- Semantic segmentation
 							</li>
 						</div>
 						</ul>
@@ -370,18 +366,18 @@
 			<div style="display: inline">	
 				<span class="dot" style="float:left"></span>
 				<div style="float:left; ">&#x2192;</div>
-				<div class="greyBox">Prepare input data</div>	
+				<div class="greyBox"> Collect input data</div>	
 				<div style="float:left; ">&#x2192;</div>
 				<div class="fragment fade-right" id="f4_3_f_1">		
-				<div class="greyBox" >Prepare DL model</div>
+				<div class="greyBox" >Select classificator and parameters </div>
 				<div style="float:left; ">&#x2192;</div>
 			</div>
 			<div class="fragment fade-right" id="f4_3_f_2">
-				<div class="greyBox" >Run the model</div>
+				<div class="greyBox" > Perform classification</div>
 				<div style="float:left; ">&#x2192;</div>
 			</div>	
 			<div class="fragment fade-right" id="f4_3_f_3">	
-				<div class="greyBox">Evaluation</div>
+				<div class="greyBox"> Assess classification</div>
 				<div style="float:left; ">&#x2192;</div>
 			</div>
 			<div class="fragment fade-right" id="f4_3_f_4">
@@ -418,9 +414,9 @@
 
 		<!--Section End: Quiz-->
 		<section id= "Chapter 4.5" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
-					<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Austria, on 18 May 2022 </p>
+					<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
 					
-					<h2 style="background-color: white; margin: 5%; "> Go to Quiz #1 </h2>
+						<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://moodle-dev.eo-lab.org/mod/hvp/view.php?id=144#h5pbookid=3&chapter=h5p-interactive-book-chapter-8665444f-b214-4fea-b1f9-93ecf37fe1b5&section=0"> Quiz #1 </a></h2>
 						
 				
 					
@@ -432,7 +428,7 @@
 		<section id="Chapter 5.0" >
 			<section data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
 				
-					<h2 style="color:rgb(0, 119, 255); background-color: white; margin: 5%; "> Convolutional Neural Network architecture </h2>
+					<h2 style="color:rgb(0, 119, 255); background-color: white; margin: 5%; "> The Convolutional Neural Network architecture (CNN)</h2>
 			
 				<aside class="notes">
 					<script>
@@ -443,7 +439,7 @@
 
 			<!-- Architecture-->
 			<section id="Chapter 5.1">
-				<h2> The CNN architecture</h2>
+				<h2> The CNN Architecture</h2>
 				<div style="width: 50%; font-size: 50%; text-align: left;">
 					<ul>
 						<li>Constructing feature maps </li>
@@ -465,9 +461,9 @@
 				
 				</div>
 				<figure style="position: absolute; right: 0%; top:12%; width:40%; ">
-					<p style="font-size: 50%; text-align:left"><i>Stepwise reduction of the size of feature maps in a CNN </i></p>
+					<p style="font-size: 40%; text-align:left"><i>Stepwise reduction of the size of feature maps in a CNN </i></p>
 					<img src="./Images/The-LeNet-5-Architecture-a-convolutional-neural-network.png" style="background: none; border: none; box-shadow: none; width:220%">
-					<p style="font-size: 50%; text-align:left"><i>Multi-layer deep fully connected network</i></p>
+					<p style="font-size: 40%; text-align:left"><i>Multi-layer deep fully connected network</i></p>
 					<img src="./Images/FCN_Ramsundar_Zadeh.png" style="background: none; border: none; box-shadow: none; width:50%">
 				</figure>
 
@@ -490,7 +486,7 @@
 						</li>
 						<ul>
 							<li>
-								Encodes feature representation at multiple scales (i.e. identifies the semantic classes that are present in the input image)
+								Encodes feature representation at multiple scales (i.e. identies the semantic classes that are present in the input image)
 							</li>
 
 						</ul>
@@ -512,7 +508,7 @@
 				
 				</div>
 				<figure style="position: absolute; right: -5%; top:25%; width:50%; ">
-					<p style="font-size: 50%; text-align:center"><i>U-Net model architecture</i></p>
+					<p style="font-size: 40%; text-align:center"><i>U-Net model architecture</i></p>
 					<img src="./Images/u-net-architecture.png" style="background: none; border: none; box-shadow: none; width:220%">
 				
 				</figure>
@@ -526,9 +522,9 @@
 					
 			<!--Section End: Quiz-->
 			<section id= "Chapter 5.3" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
-				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Austria, on 18 May 2022 </p>
+				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
 			
-					<h2 style="background-color: white; margin: 5%; "> Go to Quiz #2</h2>
+					<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://moodle-dev.eo-lab.org/mod/hvp/view.php?id=144#h5pbookid=3&chapter=h5p-interactive-book-chapter-3f287ebc-7843-43c6-a0f8-3f2a93f0386e&section=0"> Quiz #2 </a></h2>
 				
 		
 				<aside class="notes">
@@ -558,7 +554,7 @@
 			<!-- Application context-->
 			<section id="Chapter 6.1">
 				<h2> Application context</h2>
-				<div style="width: 40%; font-size: 60%; text-align: left;">
+				<div style="width: 40%; font-size: 50%; text-align: left;">
 					<ul>
 						<li>Opportunity on EO-Lab</li>
 						<ul style="font-size: 80%">
@@ -588,7 +584,7 @@
 				</div>
 
 				<figure style="position: absolute; right: 0%; top:15%; width:50%  ">
-					<p style="font-size: 50%; text-align:center"><i>Comparing Sentinel-2 and ESA WorldCover</i></p>
+					<p style="font-size: 40%; text-align:center"><i>Comparing Sentinel-2 and ESA WorldCover</i></p>
 					<img src="./Images/EO_Browser_EO_Lab.png" style="background: none; border: none; box-shadow: none; ">
 				</figure>
 				<aside class="notes">
@@ -689,7 +685,7 @@
 				</div>
 				<aside class="notes">
 					<script>
-						document.write(String(text.f6_4. text.f6_4_f_1,text.f6_4_f_2, text.f6_4_f_3, text.f6_4_f_4, text.f6_4_f_5));
+						document.write(String(text.f6_4, text.f6_4_f_1,text.f6_4_f_2, text.f6_4_f_3, text.f6_4_f_4, text.f6_4_f_5));
 					</script>	
 				</aside>
 
@@ -778,7 +774,7 @@
 						<li style="font-size: 50%; text-align: left; "> The quality of the prediction map can be further analysed in a GIS program or in python</li>
 					</div>
 					<div class="fragment" id="">	
-						<li style="font-size: 50%; text-align: left"> In case the model performance is not satisfying, several steps can be taken:</li>
+						<li style="font-size: 50%; text-align: left"> In case the model performance is not satisfying several steps can be taken:</li>
 						<ul style="font-size: 50%; ">
 							<li> More training samples </li>
 							<li> Adapting model parameters</li>
@@ -786,7 +782,7 @@
 						</ul>
 					</div>
 					<div class="fragment" id="">
-						<li style="font-size: 50%; text-align: left"> For analysing change of land cover, the presented model can be extended to classify the land cover in satellite images from dates before and after.</li>
+						<li style="font-size: 50%; text-align: left"> For a landcover change analysis the model can be used to further classify the landcover of satellite images from different dates</li>
 					</div>
 					</ul>	
 					<aside class="notes">
@@ -801,16 +797,14 @@
 		<!--Code gesamt Jupyter-NB-->
 			<section id="Chapter 6.10">
 				<h2>Code</h2>
-				<ul style="text-align: left; font-size:70%">
-					<li>The TensorFlow script of this application example can be accessed on <a href=" https://github.com/eo4geocourses/PLUS_DeepLearning/blob/main/EO_Lab_DeepLearning.html"> Github</a>.</li>
-				</ul>
+				<iframe width="800" height="500" data-src="file:///C:/Users/b1080973/Downloads/UNet_normal%20(1).html" data-preload></iframe> <!--NEU!!!	-->
 			</section>
 
 		<!--Section End: Quiz-->	
 			<section id= "Chapter 6.11" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
-				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Austria, on 18 May 2022 </p>
+				<p style="position: absolute; bottom:-100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
 		
-					<h2 style="background-color: white; margin: 5%; "> Go to Quiz #3</h2>
+					<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://moodle-dev.eo-lab.org/mod/hvp/view.php?id=144#h5pbookid=3&chapter=h5p-interactive-book-chapter-972650dd-de62-4e1c-bfbf-0379ae38bea1&section=0"> Quiz #3 </a></h2>
 			
 	
 				<aside class="notes">
@@ -880,7 +874,7 @@
 
 
 		<script src="./js/reveal.js"></script>
-		<script type='text/javascript' scr='./plugin/readfile.js'>
+		<script type='text/javascript'scr='./plugin/readfile.js'>
 		</script>
 
 		<script>
@@ -933,7 +927,7 @@
 							var i =ind.f;
 							var t=Object.keys(text);
 							// insert pagenumbers with quotations (horizontal_vertical) or fragment id to change the voice accordingly
-							var quotes=['f7_4','f8_1_q','f8_1_q_1','f8_1_q_2','f10_7','f14_2','f15_5','f15_5_f_1','f15_5_f_2','f16_2','f21_2','f21_2_f','f34_8'];
+							var quotes=[];
 							
 						for (let i=0; i< t.length;i++){
 							t_slide='f'+h+'_'+v;
@@ -943,7 +937,7 @@
 										read.readfile(text[t[i]],'en-CA')
 									}
 									if(q==quotes.length){
-										read.readfile(text[t[i]],'en-IE')
+										read.readfile(text[t[i]])
 									}
 									else{
 										q=q;
@@ -967,7 +961,7 @@
 							console.log( f);
 							var t=Object.keys(text);
 							// insert pagenumbers with quotations (horizontal_vertical) or fragment id to change the voice accordingly
-							var quotes=['f7_4','f8_1_q','f8_1_q_1','f8_1_q_2','f10_7','f14_2','f15_5','f15_5_f_1','f15_5_f_2','f16_2','f21_2','f21_2_f','f34_8'];
+							var quotes=[];
 						for (let i=0; i< t.length;i++){
 							
 							if (t[i]==f){
@@ -976,7 +970,7 @@
 										read.readfile(text[t[i]],'en-CA')
 									}
 									if(q==quotes.length){
-										read.readfile(text[t[i]],'en-IE')
+										read.readfile(text[t[i]])
 									}
 									else{
 										q=q;
