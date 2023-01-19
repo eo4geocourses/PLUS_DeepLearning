@@ -36,8 +36,8 @@
 
 
 	<link rel="stylesheet" href="./dist/reveal.css">
-	
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- audio-Player-->
+	<link rel="stylesheet" href="./css/aud-player.css"> <!-- audio-Player-->
 	<link rel="stylesheet" href="./css/img_animation.css">
 	<link rel="stylesheet" href="./css/redBox.css"> <!--RedBox Chapter: 1-->
 	<link rel="stylesheet" href="./css/greyBox.css"> <!--GreyBox Chapter: 1-->
@@ -55,6 +55,7 @@
 	<base href="." target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
 	<script type="text/javascript" src="./plugin/notes/notes.js"></script>
 	<script type="text/javascript" src="./plugin/highlight/highlight.js"></script>
+	<script src="./plugin/html-aud-player/audplayer.js"></script> <!--audio-player-->
 	
 	<script type="text/javascript" src="./dist/reveal.js"></script>
 	<script  type="text/javascript" src="./plugin/node_modules/reveal.js-menu/menu.js"></script>
@@ -111,7 +112,14 @@
 				
 					<small> <sub> 2</sub> Spatial Service GmbH</small>			
 				</p>
+				
 				</div>
+				<div style="position: absolute; bottom: -35%; left: 25%; width: 40%; ">
+				<audio controls >
+					<source src="./audio/1.0.mp3" type="audio/mp3">
+				</audio>
+			</div>
+				
 
 				
 		</section>
@@ -396,13 +404,13 @@
 		<section id= "Chapter 5.5" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
 					
 		
-						<!--<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=156"> Quiz 1: Understanding deep learning tasks for image classification </a></h2> -->
+						<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=156"> Quiz 1: Understanding deep learning tasks for image classification </a></h2>
 						
 						
 							
-							<iframe data-src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=156" width="1498" height="311" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding deep learning tasks for image classification"></iframe>
+						<!--	<iframe data-src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=156" width="1498" height="311" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding deep learning tasks for image classification"></iframe>
 							<script src="https://e-learning.eo-lab.org/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script> 
-							<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
+							<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p> -->
 						
 					
 			
@@ -498,10 +506,10 @@
 			<section id= "Chapter 6.3" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
 				
 				
-					<!--<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=157"> Quiz 2: Understanding U-Net model structure </a></h2> -->
-					<iframe src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=157" width="1098" height="225" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding the U-Net model structure"></iframe>
+					<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=157"> Quiz 2: Understanding U-Net model structure </a></h2> 
+				<!--	<iframe src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=157" width="1098" height="225" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding the U-Net model structure"></iframe>
 					<script src="https://e-learning.eo-lab.org/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
-					<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
+					<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>-->
 			
 				
 		
@@ -927,11 +935,11 @@
 		<!--Section End: Quiz-->	
 			<section id= "Chapter 7.21" data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
 				
-					<!--<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=158"> Quiz 3: Understanding the impact of available processing capacities on the DL workflow </a></h2> -->
+					<h2 style="background-color: white; margin: 5%; "> Go to<a href="https://e-learning.eo-lab.org/mod/hvp/view.php?id=158"> Quiz 3: Understanding the impact of available processing capacities on the DL workflow </a></h2> 
 					
-						 <iframe src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=158" width="1098" height="286" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding the impact of available processing capacities on the DL workflow"></iframe>
+						<!-- <iframe src="https://e-learning.eo-lab.org/mod/hvp/embed.php?id=158" width="1098" height="286" frameborder="0" allowfullscreen="allowfullscreen" title="Quiz: Understanding the impact of available processing capacities on the DL workflow"></iframe>
 						<script src="https://e-learning.eo-lab.org/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
-						<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>
+						<p style="position: absolute; top:100%; font-size:40%; color:white"> Sentinel-2,  Salzburg, Österreich, at 18. Mai 2022 </p>-->
 					
 	
 			
@@ -1013,7 +1021,7 @@
 
 		</section>
 			
-
+		
 			
 
 </div>
@@ -1022,7 +1030,7 @@
 		
 
 		
-		<script>Reveal.initialize({
+	<script>Reveal.initialize({
 				simplemenu: {
 					menuselector: '.menu a'
 				},
@@ -1280,8 +1288,11 @@
 		
 	</div>
 	<script src="./js/reveal.js"></script>
-	<script type='text/javascript'scr='./plugin/readfile.js'></script>
-	<script src="plugin/pdfexport/pdfexport.js"></script>
+	
+	<script src="./plugin/pdfexport/pdfexport.js"></script>
+	
+
+
 
 
 		<script>
@@ -1301,7 +1312,7 @@
 				//autoSlide:20000,
 				//loop:true,
 				//transition:'slide',
-				slideNumber:'c',
+				slideNumber:'h/v',
 				pdfExportShortcut: 'E',
 				
 				
@@ -1310,17 +1321,18 @@
 				
 
 				// Optional libraries used to extend on reveal.js
-				/*dependencies: [
-					{ src: './plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: './plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: './plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-					{ src: './plugin/notes/notes.js' }, { src: 'socket.io/socket.io.js', async: true },
-					{ src: './plugin/notes-server/client.js', async: true },
-					{ src: './plugin/readtext.js', async: true },
+				dependencies: [
+					//{ src: './plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					//{ src: './plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					//{ src: './plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					//{ src: './plugin/notes/notes.js' }, { src: 'socket.io/socket.io.js', async: true },
+					//{ src: './plugin/notes-server/client.js', async: true },
 					
 					
-				],*/
-				plugins: [ RevealMenu, PdfExport ],
+					
+				],
+				plugins: [ RevealMenu, PdfExport],
+				
 				menu:{
 					numbers:'c',
 					titleSelector: 'h1, h2',
@@ -1332,6 +1344,8 @@
 
 				
 			});
+		
+			
 			
 		Reveal.configure({
 			pdfMaxPagesPerSlide:1,
