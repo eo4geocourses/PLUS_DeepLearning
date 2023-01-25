@@ -113,7 +113,11 @@
 				</p>
 				
 				</div>
-				
+				<div style="position: absolute; bottom: -35%; left: 25%; width: 40%; ">
+				<audio controls >
+					<source src="./audio/0.0.mp3" type="audio/mp3">
+				</audio>
+			</div>
 				
 
 				
@@ -1380,6 +1384,26 @@
 				
 					
 					});
+
+// audio-player: first slide	
+		Reveal.on('ready', function (event){
+			
+			var t=document.getElementById("audio");
+			console.log(t)
+			
+			var h=event.indexh;
+			var v=event.indexv;
+			if(h==0 && v==0){
+
+			
+			var a=+h+"."+v+".mp3";
+			tSrc=encodeURIComponent(a);
+			
+			t.src="./audio/"+tSrc;
+		}
+		
+			
+			});
 		
 			
 				
