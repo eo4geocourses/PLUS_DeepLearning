@@ -102,7 +102,7 @@
 		<section section  data-background-image="background.jgp" data-background-opacity=1 data-background-size="100%" data-background-repeat="no-repeat">
 			
 		
-				<h1 >Deep Learning for EO data processing on the EO Cloud with TensorFlow </h1>
+				<h1 >Deep Learning for EO data processing on the EO Cloud with TensorFlow and Pytorch</h1>
 				<div style="color:#ebf4fe">
 				<small>Florian Albrecht <sub>2</sub>, Vanessa Streifeneder <sub>1</sub>, Stefan Lang<sub>1</sub></small>
 				<p></p>
@@ -126,8 +126,8 @@
 					<li>This course will support you to gain the following skills</li>
 					<ul>
 						<li> Understand the deep learning workflow and concepts for image classification with EO data</li>
-						<li> Understand how the deep learning methods can be implemented with TensorFlow</li>
-						<li> Apply a TensorFlow script in EO-Lab resources</li>
+						<li> Understand how the deep learning methods can be implemented with TensorFlow and PyTorch</li>
+						<li> Apply a TensorFlow or PyTorch script to EO-Lab resources</li>
 					</ul>
 				</ul>
 			</div>
@@ -186,7 +186,12 @@
 				</li>
 			</div>
 			<div >	
-				<li > <a href="#/8/0"> Conclusion</a></li>
+				<li >
+				<a href="#/8/0"> Application example with PyTorch</a>	
+				</li>
+			</div>
+			<div >	
+				<li > <a href="#/9/0"> Conclusion</a></li>
 			</div>					
 			</ol>		
 						
@@ -238,13 +243,13 @@
 		<!-- Work Environment-->
 		<section id="Chapter 4.2">
 			<h2> 4.2 How to arrange your work environment</h2>
-			<ul style="text-align: left; font-size:60%; margin-top: 0%;">
+			<ul style="text-align: left; font-size:55%; margin-top: 0%; margin-bottom: 0%;">
 				<li >This course focuses on scripting for Deep Learning.</li>
 				<li>Open the course material and your VM with the programming environment in two separate windows next to each other.</li>
 				<li> The link to the TensorFlow script is available on the course site in the section Course material.</li>
 			</ul>
 			<figure>
-				<img src="./Images/Slide3_figure_DL_course_setup.png" style=" background: none; border: none; box-shadow: none; width:120%; margin-top: 0%;">
+				<img src="./Images/Slide3_figure_DL_course_setup.png" style="background: none; border: none; box-shadow: none; width:80%; margin-top:-5%; margin-bottom: 0%;">
 			</figure>
 			
 		</section>
@@ -779,7 +784,7 @@
 					
 				
 					<figure>
-						<img src="./Images/ImportingTraining_3.png" style=" background: none; border: none; box-shadow: none; width:50%; ">
+						<img src="./Images/ImportingTraining_3.png" style=" background: none; border: none; box-shadow: none; width:50%; margin-top: -5%;  ">
 					</figure>
 					
 				
@@ -848,11 +853,11 @@
 				<div>
 					<li style="text-align: left; font-size: 60%;"> Specify U-Net model parameters and compile loss function, metrics and optimizer</li>
 					<figure>
-						<img src="./Images/prepareModel_new_2.png" style=" background: none; border: none; box-shadow: none; width: 60%; margin-top: 0%;  ">
+						<img src="./Images/prepareModel_new_2.png" style=" background: none; border: none; box-shadow: none; width: 50%; margin-top: 0%; margin-bottom:0%;  ">
 					</figure>
 					<li style="text-align: left; font-size: 60%;"> Start the model training using the model.fit () operation</li>
 					<figure>
-						<img src="./Images/model_fit.png" style=" background: none; border: none; box-shadow: none; width: 55%; margin-top: 0%; ">
+						<img src="./Images/model_fit.png" style=" background: none; border: none; box-shadow: none; width: 50%; margin-top: -3%; ">
 					</figure>
 				</div>
 				
@@ -888,7 +893,7 @@
 			<section id="Chapter 7.18" data-background-color="white">
 				<h2> 7.8.1 U-Net Model: Land cover classification</h2>
 							
-					<figure style="width: 70%; margin-top: 1%;">
+					<figure style="width: 65%; margin-top: -3%; margin-left: 20%;">
 						<img src="./Images/FurtherUse_1.PNG" style=" background: none; border: none; box-shadow: none; ">
 						
 					</figure>
@@ -909,7 +914,7 @@
 							<li> Adapat or develope model architecture</li>
 							<li> Try a different model</li>
 						</ol>
-						<p style="font-size: 70%;margin-top: 10%;">
+						<p style="font-size: 60%;margin-top: 5%;">
 							Closer Documentation: <a href="https://www.tensorflow.org/">TensorFlow</a>, <a href="http://www.eo4geo.eu/training/the-rise-of-artificial-intelligence-for-earth-observation/"> EO4GEO: The rise of AI for EO</a>, <a href="https://eo-college.org">EO-College</a>
 						</p>
 					</ul>
@@ -924,7 +929,7 @@
 		
 		<!--Code gesamt Jupyter-NB -->
 			<section id="Chapter 7.20" data-background-color="white">
-				<h2>7.9 Code</h2>
+				<h2>7.9 Code: TensorFlow</h2>
 				<iframe width="800" height="500" data-src="./plugin/LandcoverClassification.html" data-preload></iframe> 
 				
 			</section>
@@ -945,19 +950,152 @@
 			
 			</section>
 		</section>
-<!-- Chapter 4: Conclusion-->
+
+<!-- Chapter 4 : Application example with PyTorch-->
 	
-		<section id="Chapter 8.0" >
+<section id="Chapter 8.0" >
+	<section data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
+		
+			<h2 style="color:rgb(0, 119, 255); background-color: white; margin: 5%; ">8. Application example PyTorch </h2>
+	
+			
+	</section>
+	<!--Pytorch-->
+	<section id="Chapter 8.1 "data-background-color="white">
+		<h2> 8.1 Pytorch</h2>
+		<p style="font-size: 70%;  text-align: left; ">
+			This section shows how PyTorch can be used as an alternative to TensorFlow using the previous example.
+		</p>
+		<figure >
+			
+			<img src="./Images/PyTorch_Logo.png" style="width:30%; background: none; border: none; box-shadow: none;" >
+		</figure>
+
+
+	</section>
+
+	<!-- PyTorch Installation-->
+	<section id="Chapter 8.2 "data-background-color="white">
+		<h2>8.2 PyTorch Installation</h2>
+		<ul style="font-size: 60%;  text-align: left; width: 50%; margin-left: -30%;">
+			<li>
+				Check avilable CUDA libary on your machine	
+				<ul style="font-size: 90%;">
+					<li>
+						Windows: Got to control panel
+					</li>
+					<li>
+						Linux: Type the command "nivdia-smi" in the terminal
+					</li>
+				</ul>
+				<li>
+					Select corresponding PyTorch version on <a href=" https://pytorch.org/ "></a>
+
+				</li>
+				<li>
+					Run the command generated by the selection dialogue
+
+				</li>
+			</li>
+	
+		</ul>
+		<figure style="position: absolute; right:-50%; top: 10%; width: 130%" >
+			<img src="./Images/NVIDIA_CUDA.png" style="width:30%; background: none; border: none; box-shadow: none;" >
+			
+		</figure>
+
+
+	</section>
+<!--Training data - synchronize with model-->
+
+<section id="Chapter 8.3 "data-background-color="white">
+	<h2>8.3 Training data - Synchronize with model</h2>
+	<ul style="font-size: 70%;  text-align: left; width: 50%; margin-left: -30%; margin-top: 5%;">
+		<li>
+			Map - style datasets
+		</li>
+		<li>
+			Iterable - style datasets
+
+		</li>
+			
+			</ul>
+	<figure style="position: absolute; left: -10%; top: 40%; width: 150%" >
+		<img src="./Images/Utilis_Data_PyTorch.PNG" style="width:30%; background: none; border: none; box-shadow: none;" >
+		
+	</figure>
+
+
+</section>
+
+<!--Assessing Computational Resources-->
+
+<section id="Chapter 8.4 "data-background-color="white">
+	<h2>8.4 Assessing Computational Resources</h2>
+	
+	<figure >
+		<img src="./Images/Assessing_Comp_Resources.PNG" style=" background: none; border: none; box-shadow: none;" >
+		
+	</figure>
+</section>
+
+<!-- Model Defintion --part 1-->
+<section id="Chapter 8.5 "data-background-color="white">
+	<h2> 8.5 Options for Model Definition</h2>
+	<ul style="font-size: 70%;  text-align: left;  ">
+		<li>
+			User-defined models(regression, classification, and detection)
+		</li>
+		<li>
+			Built-in models with pre-trained weights from torchvision
+		</li>
+
+	</ul>
+	<figure >
+		
+		<img src="./Images/Torchvision.PNG" style="width:80%; background: none; border: none; box-shadow: none; margin-top: 2%;" >
+	</figure>
+
+
+</section>
+
+<!-- Model Defintion --part 2   FEHLT!! --> 
+
+
+<!--Training-->
+<section id="Chapter 8.6 "data-background-color="white">
+	<h2>8.6 PyTorch Instructions for Model Training</h2>
+	
+	<figure >
+		<img src="./Images/Training_PyTorch.PNG" style=" background: none; border: none; box-shadow: none;" >
+		
+	</figure>
+</section>
+
+
+
+<!-- PyTorch:Code --> 
+
+<section id="Chapter 8.7" data-background-color="white">
+	<h2>8.7 Code: PyTorch</h2>
+	<iframe width="800" height="500" data-src="./plugin/EO-Lab_Pytorch_script_example.html" data-preload></iframe> 
+	
+</section>
+</section>
+
+<!-- Chapter 5: Conclusion-->
+	
+		<section id="Chapter 9.0" >
 				<section data-background-image="./Images/Satellitenaufnahme_total.jpg" data-background-opacity=1 data-background-size="100" data-background-repeat="no-repeat" >
 					
-						<h2 style="color:rgb(0, 119, 255); background-color: white; margin: 5%; ">8. Conclusion </h2>
+						<h2 style="color:rgb(0, 119, 255); background-color: white; margin: 5%; ">9. Conclusion </h2>
 				
 						
 				</section>
 				
 			<!-- Key messages -->
-			<section id="Chapter 8.1 "data-background-color="white">
-				<h2>8.1 Key messages of this course</h2>
+			<section id="Chapter 9.1 "data-background-color="white">
+				<h2>9.1 Key messages of this course</h2>
 				<ul style="font-size:60%">
 					<li>
 						This course presented:
@@ -984,8 +1122,8 @@
 			</section>	
 
 			<!--Next steps -->
-			<section id ="Chapter 8.2"data-background-color="white">
-				<h2> 8.2 Next steps to pursue</h2>
+			<section id ="Chapter 9.2"data-background-color="white">
+				<h2> 9.2 Next steps to pursue</h2>
 				<div style="font-size: 75%; text-align: left;">
 				<ul>
 					<li> Opportunities for your next steps with the TensorFlow script</li>
@@ -1009,8 +1147,8 @@
 			</section>
 
 			<!--Contributors -->
-			<section id="Chapter 8.3"data-background-color="white">
-				<h2> 8.3 Contributors</h2>
+			<section id="Chapter 9.3"data-background-color="white">
+				<h2> 9.3 Contributors</h2>
 				<div style="text-align: left; font-size: 75%">
 					<ul>
 						<li style="margin-bottom: 2%;"> <b>Course material authors:</b> Florian Albrecht, Spatial Service GmbH, Salzburg, Austria, Vanessa Streifeneder and Stefan Lang, University of Salzburg, Department of Geoinformatics - Z_GIS, Salzburg, Austria</li>
